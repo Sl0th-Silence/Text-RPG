@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.main_game">
-  <grid id="27dc6" binding="Main_Jpanel" layout-manager="GridLayoutManager" row-count="9" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="Main_Jpanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="543" height="400"/>
+      <xy x="20" y="20" width="543" height="403"/>
     </constraints>
     <properties>
       <foreground color="-16053490"/>
@@ -15,7 +15,9 @@
     <children>
       <scrollpane id="46bbc">
         <constraints>
-          <grid row="3" column="2" row-span="4" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="258" height="293"/>
+          </grid>
         </constraints>
         <properties/>
         <border type="etched" title="Log">
@@ -33,29 +35,11 @@
           </component>
         </children>
       </scrollpane>
-      <scrollpane id="69977">
-        <constraints>
-          <grid row="0" column="2" row-span="3" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="etched" title="Info">
-          <font name="Monospaced" size="15" style="1"/>
-        </border>
-        <children>
-          <component id="dbf99" class="javax.swing.JTextArea" binding="TAOptions">
-            <constraints/>
-            <properties>
-              <editable value="false"/>
-              <font name="Monospaced" size="15" style="1"/>
-              <lineWrap value="true"/>
-              <wrapStyleWord value="true"/>
-            </properties>
-          </component>
-        </children>
-      </scrollpane>
       <scrollpane id="efcec">
         <constraints>
-          <grid row="0" column="1" row-span="7" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="259" height="293"/>
+          </grid>
         </constraints>
         <properties/>
         <border type="etched" title="Main">
@@ -73,19 +57,9 @@
           </component>
         </children>
       </scrollpane>
-      <hspacer id="bbb21">
-        <constraints>
-          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
-      <hspacer id="fffa5">
-        <constraints>
-          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
       <scrollpane id="d82de">
         <constraints>
-          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none" title="Input">
@@ -103,11 +77,6 @@
           </component>
         </children>
       </scrollpane>
-      <vspacer id="1c187">
-        <constraints>
-          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
     </children>
   </grid>
 </form>

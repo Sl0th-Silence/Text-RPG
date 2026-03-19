@@ -12,11 +12,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class main_game extends JFrame {
     private JTextField TFInput;
     private JTextArea TAMain;
-    private JTextArea TAOptions;
     private JTextArea TAInput;
     private JPanel Main_Jpanel;
 
@@ -32,13 +32,11 @@ public class main_game extends JFrame {
         Main_Jpanel.setBackground(Color.BLACK);
         TFInput.setBackground(Color.BLACK);
         TAMain.setBackground(Color.BLACK);
-        TAOptions.setBackground(Color.BLACK);
         TAInput.setBackground(Color.BLACK);
 
         Main_Jpanel.setForeground(Color.WHITE);
         TFInput.setForeground(Color.WHITE);
         TAMain.setForeground(Color.WHITE);
-        TAOptions.setForeground(Color.WHITE);
         TAInput.setForeground(Color.WHITE);
 
         setContentPane(Main_Jpanel);
@@ -54,11 +52,6 @@ public class main_game extends JFrame {
         Story story = new Story();
         TAMain.setText(story.title_screen(0));
 
-        //Show all items for TESTING ONLY
-        for (Item item : possible_items) {
-            TAMain.append(item.toString());
-        }
-
         TFInput.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -67,8 +60,24 @@ public class main_game extends JFrame {
                     return;
                 }
                 else {
-                    TAInput.setText(TAInput.getText() + '\n' + TFInput.getText());
+                    String input = TFInput.getText().toLowerCase();
+                    System.out.println(input);
+
                     TFInput.setText("");
+
+                    if (Objects.equals(input, "show all items") ||
+                        Objects.equals(input, "show all"))
+                    {
+                        //Show all items for TESTING ONLY
+                        for (Item item : possible_items) {
+                            TAInput.append(item.toString());
+                        }
+                    }
+                    else
+                    {
+                        System.out.println("'" + input + "'");
+                    }
+                    input = "";
                 }
 
                 //For input/output

@@ -13,6 +13,6 @@ public class Item {
 
     public String toString()
     {
-        return "\nItem: " + this.name + "\nDescription: " + this.description;
+        return "\nItem: " + this.name + "\nDescription: " + this.description + '\n';
     }
 }
