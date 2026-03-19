@@ -1,0 +1,87 @@
+{
+  "greeting": [
+    "Hello",
+    "Hi",
+    "Hey",
+    "Greetings, traveler",
+    "Well met",
+    "Ah, a new face"
+  ],
+  "farewell": [
+    "Goodbye",
+    "Farewell",
+    "Safe travels",
+    "Until we meet again",
+    "Be on your way"
+  ],
+  "affirmative": [
+    "Yes",
+    "Yeah",
+    "Indeed",
+    "Of course",
+    "As you say"
+  ],
+  "negative": [
+    "No",
+    "Nope",
+    "Not at all",
+    "I refuse",
+    "Absolutely not"
+  ],
+  "attack": [
+    "Attack",
+    "Strike",
+    "Hit",
+    "Swing weapon",
+    "Engage enemy"
+  ],
+  "defend": [
+    "Defend",
+    "Block",
+    "Brace",
+    "Take cover",
+    "Hold position"
+  ],
+  "low_health_warning": [
+    "You're badly wounded!",
+    "Your vision blurs from blood loss.",
+    "You can barely stand.",
+    "One more hit could be fatal!"
+  ],
+  "npc_hostile": [
+    "The enemy snarls at you.",
+    "They draw their weapon!",
+    "You feel a sudden hostility.",
+    "This won't end peacefully..."
+  ],
+  "npc_friendly": [
+    "They smile warmly.",
+    "You sense no danger here.",
+    "They greet you kindly.",
+    "A friendly face in a harsh land."
+  ],
+  "loot_found": [
+    "You found something!",
+    "There's loot here.",
+    "You discover a hidden item.",
+    "Something catches your eye."
+  ],
+  "gold_gain": [
+    "You gained some gold.",
+    "Coins jingle in your pouch.",
+    "Your wealth increases.",
+    "You pick up a handful of coins."
+  ],
+  "level_up": [
+    "You feel stronger!",
+    "You've gained a level!",
+    "Power surges through you.",
+    "Your skills have improved."
+  ],
+  "death": [
+    "You have fallen...",
+    "Darkness consumes you.",
+    "Your journey ends here.",
+    "You collapse, defeated."
+  ]
+}

@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.Models.Item;
+import org.example.Models.MainChar;
+import org.example.Models.Story;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,6 +17,11 @@ public class main_game extends JFrame {
     private JPanel Main_Jpanel;
 
     public main_game() {
+        setResizable(false);
+
+        //Map
+        int[][] map = new int[15][15];
+
         setSize(1000, 800);
         // Set colors
         Main_Jpanel.setBackground(Color.BLACK);
@@ -27,8 +36,6 @@ public class main_game extends JFrame {
         TAOptions.setForeground(Color.WHITE);
         TAInput.setForeground(Color.WHITE);
 
-        TAMain.setText("Welcome to <insert Game Name Here>\nThis will be a perilous journey\nAre you ready?");
-
         setContentPane(Main_Jpanel);
         setLocationRelativeTo(null);
 
@@ -37,6 +44,11 @@ public class main_game extends JFrame {
 
         //Focus on type input window
         EventQueue.invokeLater(() -> TFInput.requestFocusInWindow());
+
+        //Title Menu
+        Story story = new Story();
+        TAMain.setText(story.title_screen(0));
+
 
         TFInput.addActionListener(new ActionListener() {
             @Override
@@ -47,7 +59,10 @@ public class main_game extends JFrame {
                 }
                 else {
                     TAInput.setText(TAInput.getText() + '\n' + TFInput.getText());
-                    TFInput.setText("");                }
+                    TFInput.setText("");
+                }
+
+                //For input/output
 
             }
         });

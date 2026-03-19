@@ -1,0 +1,44 @@
+{
+  "greetings": [
+    "hello",
+    "hi",
+    "yo",
+    "greetings",
+    "well met",
+    "salutations"
+  ],
+
+  "goodbye": [
+    "goodbye",
+    "bye",
+    "take care",
+    "until next time",
+    "farewell",
+    "peace out",
+    "see you later"
+  ],
+
+  "help_commands": [
+    "/help",
+    "/info"
+  ],
+
+  "general_commands": [
+    "look around",
+    "inspect {input}",
+    "inspect area",
+    "inventory",
+    "equip {item}"
+  ],
+
+  "movement_commands": [
+    "go north",
+    "north",
+    "go south",
+    "south",
+    "go east",
+    "east",
+    "go west",
+    "west"
+  ]
+}
