@@ -1,43 +1,37 @@
 package org.example;
 
 import org.example.Models.Item;
-import org.example.Models.MainChar;
 import org.example.Models.Story;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class main_game extends JFrame {
     private JTextField TFInput;
     private JTextArea TAMain;
-    private JTextArea TAInput;
+    private JTextArea TALog;
     private JPanel Main_Jpanel;
 
-    public main_game(ArrayList<Item> i_possible_items) {
+    public main_game(ArrayList<Item> possible_items) {
         setResizable(false);
         //Map
         int[][] map = new int[15][15];
-
-        ArrayList<Item> possible_items = i_possible_items;
 
         setSize(1000, 800);
         // Set colors
         Main_Jpanel.setBackground(Color.BLACK);
         TFInput.setBackground(Color.BLACK);
         TAMain.setBackground(Color.BLACK);
-        TAInput.setBackground(Color.BLACK);
+        TALog.setBackground(Color.BLACK);
 
         Main_Jpanel.setForeground(Color.WHITE);
         TFInput.setForeground(Color.WHITE);
         TAMain.setForeground(Color.WHITE);
-        TAInput.setForeground(Color.WHITE);
+        TALog.setForeground(Color.WHITE);
 
         setContentPane(Main_Jpanel);
         setLocationRelativeTo(null);
@@ -45,13 +39,11 @@ public class main_game extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
-        //Focus on type input window
-        EventQueue.invokeLater(() -> TFInput.requestFocusInWindow());
-
         //Title Menu
         Story story = new Story();
         TAMain.setText(story.title_screen(0));
 
+        //Listener <Enter>
         TFInput.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,9 +52,9 @@ public class main_game extends JFrame {
                     return;
                 }
                 else {
-                    String input = TFInput.getText().toLowerCase();
-                    System.out.println(input);
-
+                    String input = TFInput.getText();
+                    TALog.setText(TALog.getText().concat("\n>> " + input));
+                    input = TFInput.getText().toLowerCase();
                     TFInput.setText("");
 
                     if (Objects.equals(input, "show all items") ||
@@ -70,12 +62,12 @@ public class main_game extends JFrame {
                     {
                         //Show all items for TESTING ONLY
                         for (Item item : possible_items) {
-                            TAInput.append(item.toString());
+                            TALog.append(item.toString());
                         }
                     }
-                    else
+                    else if (Objects.equals(input, "clear"))
                     {
-                        System.out.println("'" + input + "'");
+                        TALog.setText("");
                     }
                     input = "";
                 }

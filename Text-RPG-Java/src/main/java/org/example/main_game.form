@@ -24,7 +24,7 @@
           <font name="Monospaced" size="15" style="1"/>
         </border>
         <children>
-          <component id="799ef" class="javax.swing.JTextArea" binding="TAInput">
+          <component id="799ef" class="javax.swing.JTextArea" binding="TALog">
             <constraints/>
             <properties>
               <editable value="false"/>
