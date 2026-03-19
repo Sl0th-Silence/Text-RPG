@@ -8,6 +8,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class main_game extends JFrame {
     private JTextField TFInput;
@@ -16,11 +20,12 @@ public class main_game extends JFrame {
     private JTextArea TAInput;
     private JPanel Main_Jpanel;
 
-    public main_game() {
+    public main_game(ArrayList<Item> i_possible_items) {
         setResizable(false);
-
         //Map
         int[][] map = new int[15][15];
+
+        ArrayList<Item> possible_items = i_possible_items;
 
         setSize(1000, 800);
         // Set colors
@@ -49,6 +54,10 @@ public class main_game extends JFrame {
         Story story = new Story();
         TAMain.setText(story.title_screen(0));
 
+        //Show all items for TESTING ONLY
+        for (Item item : possible_items) {
+            TAMain.append(item.toString());
+        }
 
         TFInput.addActionListener(new ActionListener() {
             @Override
