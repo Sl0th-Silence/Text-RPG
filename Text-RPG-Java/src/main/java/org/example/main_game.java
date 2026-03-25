@@ -26,7 +26,6 @@ public class main_game extends JFrame {
         setSize(1000, 800);
         InputOutput IO = new InputOutput();
         //inputs
-        HashMap<Integer, String> inputs = IO.getInputs();
         // Set colors
         Main_Jpanel.setBackground(Color.BLACK);
         TFInput.setBackground(Color.BLACK);
@@ -62,6 +61,21 @@ public class main_game extends JFrame {
                     input = TFInput.getText().toLowerCase();
                     TFInput.setText("");
 
+                    //For input/output
+                    //Check the input is a valid input
+                    try {
+                        ArrayList<String> checkInput = IO.checkInput(input);
+                        if (Objects.equals(input, checkInput.getFirst()))
+                        {
+                            TAMain.setText(TAMain.getText() + '\n' + input);
+                        }
+                        else {
+                            TAMain.setText(TAMain.getText() + "\n\nI didn't understand that");
+                        }
+                    } catch (Exception ex) {
+                        TAMain.setText(TAMain.getText() + "\n\nI didn't understand that");
+                    }
+
                     if (Objects.equals(input, "show all items") ||
                         Objects.equals(input, "show all"))
                     {
@@ -76,9 +90,6 @@ public class main_game extends JFrame {
                     }
                     input = "";
                 }
-
-                //For input/output
-
             }
         });
     }
