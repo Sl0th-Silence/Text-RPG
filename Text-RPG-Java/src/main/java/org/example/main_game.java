@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.Models.InputOutput;
 import org.example.Models.Item;
 import org.example.Models.Story;
 
@@ -8,6 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class main_game extends JFrame {
@@ -22,6 +24,9 @@ public class main_game extends JFrame {
         int[][] map = new int[15][15];
 
         setSize(1000, 800);
+        InputOutput IO = new InputOutput();
+        //inputs
+        HashMap<Integer, String> inputs = IO.getInputs();
         // Set colors
         Main_Jpanel.setBackground(Color.BLACK);
         TFInput.setBackground(Color.BLACK);
